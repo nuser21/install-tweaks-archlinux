@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# INSTALL SCRIPT FOR ARCH
+# Installing basic system utilities frist.
+
+#cd ~
+#yes | sudo pacman -Syu
+#yes | sudo pacman -S bpytop java8-openjfx jdk8-openjdk jre8-openjdk jre8-openjdk-headless yay
+
+# Installing software 
+
+#yes | sudo pacman -S discord git code keepassxc tor kdenlive obs-studio
+#yay -S tlauncher google-chrome betterdiscord edex-ui --noconfirm
+
+# system tweaks, these are my personal system tweaks, do not run without removing these,
+
+#adds path to bashrc
+ echo 'export PATH=$PATH:/home/defc0n/scripts' >> ~/.bashrc
+ 
+
+# mounts my other partitions
+ sudo sh -c "echo '                                                     
+UUID=4359-BC75  /boot/efi       vfat    umask=0077      0       2
+UUID=96aca4d7-f52f-41ac-b4bc-239692578b1c       /       ext4    defaults,noatime        0       1
+UUID=4020d497-288c-4311-92c4-3b789092e007       /home   ext4    defaults,noatime        0       2
+/dev/nvme0n1p7                              /games  ntfs    defaults 0 0' >> /etc/fstab"
+
